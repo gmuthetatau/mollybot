@@ -11,3 +11,8 @@ reddit = praw.Reddit(user_agent=my_user_agent,
                      client_secret=my_client_secret,
                      username=my_username,
                      password=my_password)
+
+
+def getFrontPage(time_filter='day'):
+	return reddit.front.top(time_filter=time_filter)
+
