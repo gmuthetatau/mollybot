@@ -16,3 +16,5 @@ reddit = praw.Reddit(user_agent=my_user_agent,
 def getFrontPage(time_filter='day', limit=10):
 	return reddit.front.top(time_filter=time_filter, limit=limit)
 
+def getSubredditPosts(subreddit, limit=10):
+	return reddit.subreddit(subreddit).top(limit=limit)

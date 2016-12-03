@@ -3,7 +3,7 @@ from task import Task
 
 class Chris(Task):
 	def run(self):
-		self.body = "this is a test"
-		self.title = "this is a title"
+		self.body = "This is the body of what I am going to return"
+		self.title = "Chris test task"
 
 chris = Chris()
