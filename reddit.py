@@ -18,3 +18,6 @@ def getFrontPage(time_filter='day', limit=10):
 
 def getSubredditPosts(subreddit, limit=10):
 	return reddit.subreddit(subreddit).top(limit=limit)
+
+def getTopCommentsOfAFriend(limit = 10, username = "hutacars"):
+	return reddit.redditor(username).comments.top(time_filter="week", limit=10)

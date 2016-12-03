@@ -39,7 +39,7 @@ def send():
 
 	# Record the MIME types of both parts - text/plain and text/html.
 	#part1 = MIMEText(text, 'plain')
-	part2 = MIMEText(html, 'html')
+	part2 = MIMEText(html.encode("ascii", "ignore"), 'html')
 
 	# Attach parts into message container.
 	# According to RFC 2046, the last part of a multipart message, in this case
