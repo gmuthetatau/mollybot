@@ -2,6 +2,7 @@ from reddit import reddit
 from reddit import getFrontPage
 from task import Task
 import re
+from markdown2 import Markdown
 
 class rPost:
     url = ""
@@ -55,10 +56,11 @@ class Summary(Task):
             return result
 
     def setTaskBody(self):
+        markdowner = Markdown()
         self.body = ""
         for post in self.tops:
             self.body += "<h3>" + str(post.score) + " : " + str(post.sub) + " <a href=" + post.url + ">" + post.title + "</a></h3>"
-            self.body += "<p>Top Comment: " + post.topComment + "<img src='" + post.imageUrl + "'>" + '''</p>
+            self.body += "<p>Top Comment: " + markdowner.convert(post.topComment) + "<img src='" + post.imageUrl + "'>" + '''</p>
             '''
 
     def printTops(self):

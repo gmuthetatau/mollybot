@@ -10,7 +10,7 @@ from email.mime.text import MIMEText
 tasks = [chris, haiku, summary]
 
 def send():
-	to = 'tlrwgnr@gmail.com'
+	to = 'bednar.christopher@gmail.com'
 	gmail_user = 'bednar.christopher@gmail.com'
 	gmail_pwd = 'mmitmucfufouefjf'
 	smtpserver = smtplib.SMTP("smtp.gmail.com",587)
