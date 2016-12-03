@@ -31,7 +31,7 @@ def send():
 		# Create the body of the message (a plain-text and an HTML version).
 		#text = "Hi!\nHow are you?\nHere is the link you wanted:\nhttps://www.python.org"
 		html += "<h2>" + task.title + "</h2>"
-		html += "<blockquote>" + task.body + "</blockquote>"
+		html += "<div style='margin-left: 30px;'>" + task.body + "</div>"
 		html += "</br>"
 
 	html += "</body></html>"
