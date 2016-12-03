@@ -1,3 +1,5 @@
+
+
 from reddit import reddit
 from reddit import getFrontPage
 from task import Task
@@ -7,6 +9,7 @@ from markdown2 import Markdown
 class rPost:
     url = ""
     title = ""
+    body = ""
     sub = ""
     score = 0
     topComment = ""
@@ -36,6 +39,7 @@ class Summary(Task):
         i = 0
         for item in getFrontPage(limit = 10):
             self.tops.append(rPost(item.title))
+            self.tops[i].body = item.selftext
             self.tops[i].score = item.score
             self.tops[i].topComment = self.getTopComment(item)
             self.tops[i].sub = item.subreddit
@@ -60,6 +64,7 @@ class Summary(Task):
         self.body = ""
         for post in self.tops:
             self.body += "<h3>" + str(post.score) + " : " + str(post.sub) + " <a href=" + post.url + ">" + post.title + "</a></h3>"
+            self.body += "<p>" + post.body + "</p>"
             self.body += "<p>Top Comment: " + markdowner.convert(post.topComment) + "<img src='" + post.imageUrl + "'>" + '''</p>
             '''
 
