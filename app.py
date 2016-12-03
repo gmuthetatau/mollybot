@@ -1,15 +1,16 @@
 #imports from everyone's part of the project
 from haiku import haiku
 from chris import chris
+from Summary import summary
 
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-tasks = [chris, haiku]
+tasks = [chris, haiku, summary]
 
 def send():
-	to = 'bednar.christopher@gmail.com'
+	to = 'tlrwgnr@gmail.com'
 	gmail_user = 'bednar.christopher@gmail.com'
 	gmail_pwd = 'mmitmucfufouefjf'
 	smtpserver = smtplib.SMTP("smtp.gmail.com",587)
@@ -55,4 +56,3 @@ for task in tasks:
 	task.run()
 
 send()
-
