@@ -13,6 +13,6 @@ reddit = praw.Reddit(user_agent=my_user_agent,
                      password=my_password)
 
 
-def getFrontPage(time_filter='day'):
-	return reddit.front.top(time_filter=time_filter)
+def getFrontPage(time_filter='day', limit=10):
+	return reddit.front.top(time_filter=time_filter, limit=limit)
 
