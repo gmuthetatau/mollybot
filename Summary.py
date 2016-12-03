@@ -22,12 +22,10 @@ class rPost:
 class Summary(Task):
     tops = []
 
-    def __init__(self):
+    def run(self):
         self.update()
         self.title = "Top Posts Of The Day"
 
-    def run(self):
-        return self.tops
 
     def update(self):
         self.populateTops()
@@ -49,7 +47,7 @@ class Summary(Task):
             # if "http://" in comm.body:
             try:
                 url = re.search("(?P<url>https?://[^\s]+)", result).group("url")
-                print url
+                # print url
                 self.imageUrl = re.search("(?P<url>https?://[^\s]+)", result).group("url")
 
             except:
@@ -68,6 +66,4 @@ class Summary(Task):
             print str(post.score) + " : " + post.title , " : " , post.topComment
             print ""
 
-
-neo = Summary()
-print neo.body
+summary = Summary()
