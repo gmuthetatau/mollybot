@@ -63,9 +63,9 @@ class Summary(Task):
         markdowner = Markdown()
         self.body = ""
         for post in self.tops:
-            self.body += "<h3>" + str(post.score) + " : r/" + str(post.sub) + " <a href=" + post.url + ">" + post.title + "</a></h3>"
+            self.body += "<h3><span style='font-weight:bold; color:orange;'>" + str(post.score) + "</span> : r/" + str(post.sub) + " <a href=" + post.url + ">" + post.title + "</a></h3>"
             self.body += "<p>" + post.body + "</p>"
-            self.body += "<p>Top Comment: " + markdowner.convert(post.topComment) + "<img src='" + post.imageUrl + "'>" + '''</p>
+            self.body += "<div style='margin-left:10px; border-left: 3px solid gray; padding-left: 5px; font-size: 15px;'><p>" + markdowner.convert(post.topComment) + "<img src='" + post.imageUrl + "'>" + '''</p></div>
             '''
 
     def printTops(self):

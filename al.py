@@ -32,12 +32,18 @@ class Al(Task):
 				else:
 					l += word + " "
 				c += 1
-			return l
+			final.append(l)
+		string = ""
+		q = 0
+		while q < len(final):
+			string += final[q] + "<br>"
+			q += 1
+		return string
 
 
 	def run(self):
 		self.body = self.dislexia(getFrontPage())
-		self.title = "Chris test task"
+		self.title = "The Word Shuffle"
 
 
 al = Al()
