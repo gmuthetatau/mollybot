@@ -11,7 +11,7 @@ from email.mime.text import MIMEText
 tasks = [chris, summary, al, haiku]
 
 def send():
-	to = 'mthomson1196@gmail.com'
+	to = 'tlrwgnr@gmail.com'
 	gmail_user = 'bednar.christopher@gmail.com'
 	gmail_pwd = 'mmitmucfufouefjf'
 	smtpserver = smtplib.SMTP("smtp.gmail.com",587)

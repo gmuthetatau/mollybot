@@ -20,7 +20,7 @@ class haiku(Task):
 				if legal:
 					#HTML Encoding
 					ie = urllib.quote(i)
-					
+
 					url = "https://wordsapiv1.p.mashape.com/words/" + ie + "/syllables"
 					url_type = "https://wordsapiv1.p.mashape.com/words/" + ie
 
@@ -79,7 +79,7 @@ class haiku(Task):
 						conj_arr.append(key)
 			except IndexError:
 				pass
-		
+
 		# shuffle the lists
 		random.shuffle(adverb_arr)
 		random.shuffle(verb_arr)
@@ -87,7 +87,7 @@ class haiku(Task):
 		random.shuffle(noun_arr)
 		random.shuffle(conj_arr)
 
-		
+
 		# rand_verb = random.randint(0,len(verb_arr)-1)
 
 		syl_count = 0
@@ -171,7 +171,7 @@ class haiku(Task):
 		#print str_haiku
 		self.body = str_haiku
 		self.title = "Daily Haiku"
-		
+		return ret_string + "\n\n" + ret_string2 + "\n\n" + ret_string3 + "\n\n"
+
 
 haiku = haiku()
-
