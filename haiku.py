@@ -15,7 +15,7 @@ class haiku(Task):
 			count = 0
 			for i in subArray:
 				#Getting rid of characters ending with non-alphabetic characters
-
+				i.lower()
 				legal = re.match("^((?![,.?!;:+]).)*$", i)
 				if legal:
 					#HTML Encoding
@@ -167,7 +167,7 @@ class haiku(Task):
 									rem = rem - di[no][0]
 		#print ret_string3
 
-		str_haiku = ret_string + "\n" + ret_string2 + "\n" + ret_string3
+		str_haiku = "<div style=\"display: inline-block; width: 300px;\"><img style=\"max-width: 300px; max-height: 300px;\" src=\"http://static.tumblr.com/c5565ab2cdc38d9657ff88d9edd84ff9/eqshr5p/pW7nqm1gd/tumblr_static_34t4m9yml484so4cg0cw04s8k.png\"></img></div><div style=\"display: inline-block; font-size: 18px; vertical-align: top; color: purple; font-family: helvetica;\"><p>" + ret_string + "</p><p>" + ret_string2 + "</p><p>" + ret_string3 + "</p></div>"
 		#print str_haiku
 		self.body = str_haiku
 		self.title = "Daily Haiku"
