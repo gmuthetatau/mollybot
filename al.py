@@ -32,7 +32,7 @@ class Al(Task):
 				else:
 					l += word + " "
 				c += 1
-			return l
+			print l
 
 
 	def run(self):
