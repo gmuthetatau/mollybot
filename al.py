@@ -37,7 +37,7 @@ class Al(Task):
 
 	def run(self):
 		self.body = self.dislexia(getFrontPage())
-		self.title = "Chris test task"
+		self.title = "The Word Shuffle"
 
 
 al = Al()
