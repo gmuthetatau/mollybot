@@ -8,10 +8,10 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-tasks = [chris, summary, haiku, al]
+tasks = [chris, summary, al, haiku]
 
 def send():
-	to = 'bednar.christopher@gmail.com'
+	to = 'mthomson1196@gmail.com'
 	gmail_user = 'bednar.christopher@gmail.com'
 	gmail_pwd = 'mmitmucfufouefjf'
 	smtpserver = smtplib.SMTP("smtp.gmail.com",587)

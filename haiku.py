@@ -65,17 +65,20 @@ class haiku(Task):
 		conj_arr = []
 
 		for key in di.keys():
-			for l in di[key][1]:
-				if (l == "adverb"):
-					adverb_arr.append(key)
-				if (l == "verb"):
-					verb_arr.append(key)
-				if (l == "adjective"):
-					adj_arr.append(key)
-				if (l == "noun"):
-					noun_arr.append(key)
-				if (l == "conjunction"):
-					conj_arr.append(key)
+			try:
+				for l in di[key][1]:
+					if (l == "adverb"):
+						adverb_arr.append(key)
+					if (l == "verb"):
+						verb_arr.append(key)
+					if (l == "adjective"):
+						adj_arr.append(key)
+					if (l == "noun"):
+						noun_arr.append(key)
+					if (l == "conjunction"):
+						conj_arr.append(key)
+			except IndexError:
+				pass
 		
 		# shuffle the lists
 		random.shuffle(adverb_arr)
@@ -165,8 +168,9 @@ class haiku(Task):
 		#print ret_string3
 
 		str_haiku = ret_string + "\n" + ret_string2 + "\n" + ret_string3
-		print str_haiku
-		return str_haiku
+		#print str_haiku
+		self.body = str_haiku
+		self.title = "Daily Haiku"
 		
 
 haiku = haiku()
