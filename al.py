@@ -34,8 +34,10 @@ class Al(Task):
 				c += 1
 			final.append(l)
 		string = ""
-		for i in final:
-			string += final[i] + "<br>"
+		q = 0
+		while q < len(final):
+			string += final[q] + "<br>"
+			q += 1
 		return string
 
 
