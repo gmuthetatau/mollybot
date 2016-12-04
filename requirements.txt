@@ -1,7 +1,10 @@
 decorator==4.0.10
-praw==3.5.0
+markdown2==2.3.2
+poster==0.8.1
+praw==4.0.0
 prawcore==0.3.0
 requests==2.12.3
 six==1.10.0
+Unirest==1.1.7
 update-checker==0.15
 wheel==0.24.0

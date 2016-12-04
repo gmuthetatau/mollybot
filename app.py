@@ -2,12 +2,13 @@
 from haiku import haiku
 from chris import chris
 from Summary import summary
+from al import al
 
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-tasks = [chris, haiku, summary]
+tasks = [chris, summary, haiku, al]
 
 def send():
 	to = 'bednar.christopher@gmail.com'
