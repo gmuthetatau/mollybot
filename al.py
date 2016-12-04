@@ -32,7 +32,11 @@ class Al(Task):
 				else:
 					l += word + " "
 				c += 1
-			print l
+			final.append(l)
+		string = ""
+		for i in final:
+			string += final[i] + "<br>"
+		return string
 
 
 	def run(self):
